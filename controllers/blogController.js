@@ -23,6 +23,7 @@ const getBlogs = async (req, res) => {
 
 
 const createBlog = async (req, res) => {
+    console.log(req.user);
     const { title, category, content, image } = req.body;
     try {
         const blog = await Blog.create({
