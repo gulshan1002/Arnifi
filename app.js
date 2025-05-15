@@ -20,4 +20,8 @@ app.use(cookieParser());
 app.use('/auth', authRoutes);
 app.use('/blogs', blogRoutes);
 
+app.use((req, res, next) => {
+    res.status(403).json({ message: "Not found or this page doesn't exist" });
+});
+
 module.exports = app;
