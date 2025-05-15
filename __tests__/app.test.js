@@ -32,3 +32,9 @@ describe('Auth and Blog API Endpoints', () => {
         expect(response.body).toHaveProperty('token');
     });
 });
+
+afterAll(async () => {
+    // If you use mongoose directly:
+    const mongoose = require('mongoose');
+    await mongoose.connection.close();
+});
