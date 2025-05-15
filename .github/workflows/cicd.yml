@@ -23,7 +23,12 @@ jobs:
 
       - name: Run tests
         run: npm test -- app.test.js
-
+        env:
+          MONGO_URI: ${{secrets.MONGO_URI}}
+          JWT_SECRET: ${{secrets.JWT_SECRET}}
+          PORT: ${{secrets.PORT}}
+          NODE_ENV: ${{secrets.NODE_ENV}}
+          JWT_EXPIRES_IN: ${{secrets.JWT_EXPIRES_IN}}
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         with:
