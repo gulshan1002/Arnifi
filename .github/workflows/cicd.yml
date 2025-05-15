@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - Gulshan_2
 
 jobs:
   build-and-deploy:
