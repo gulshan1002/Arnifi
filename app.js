@@ -8,11 +8,6 @@ const blogRoutes = require('./routes/blogRoutes');
 const app = express();
 connectDB();
 
-app.use(cors({
-    origin: "https://arnifi-api-epc5f4hxducsendt.centralindia-01.azurewebsites.net/",
-    credentials: true, // allow cookies and credentials
-}));
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
