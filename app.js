@@ -9,7 +9,7 @@ const app = express();
 connectDB();
 
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: "https://arnifi-api-epc5f4hxducsendt.centralindia-01.azurewebsites.net/",
     credentials: true, // allow cookies and credentials
 }));
 
